@@ -33,7 +33,7 @@ pipeline {
                     sh "docker rm -f mon-container || true"
 
                     echo "Déployer le conteneur avec la nouvelle image"
-                    //sh "docker run -d --name mon-container -p 80:80 ${DOCKER_IMAGE}:${DOCKER_TAG}"
+                    sh "docker run -d --name mon-container -p 3000:3000 ${DOCKER_IMAGE}:${DOCKER_TAG}"
                 }
             }
         }
